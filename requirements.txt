@@ -1,4 +1,5 @@
 git-changelog==2.5.3
+faiss-cpu==1.10.0
 pandas==2.2.3
 plotly==6.0.0
 sentence_transformers==3.4.1
