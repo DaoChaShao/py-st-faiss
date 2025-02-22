@@ -43,7 +43,10 @@ class Timer(object):
         self._elapsed = self._end - self._start
 
     def __repr__(self):
-        return f"{self._description} took {self._elapsed:.{self._precision}f} seconds"
+        if self._elapsed is None:
+            return "Timer not started yet."
+        else:
+            return f"{self._description} elapsed: {self._elapsed:.{self._precision}f} seconds"
 
 
 class DimensionsReducer(object):
