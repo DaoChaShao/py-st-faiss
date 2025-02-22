@@ -25,6 +25,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to include recent changes and improvements ([051580d](https://github.com///commit/051580dde5bb5eba4aaaa252e0a3baa2d7c05a4e))
 - add introduction and usage instructions to README.md ([f62c7bd](https://github.com///commit/f62c7bd0000406656d55e32029074cbe36df42f1))
 - update CHANGELOG.md to reflect recent feature additions and bug fixes ([cae9a2a](https://github.com///commit/cae9a2a65cb9991d439613fb2482156b9f63fbe7))
 
