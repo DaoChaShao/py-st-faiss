@@ -9,5 +9,6 @@ embeddings in the vector database.
 3. Run the command `streamlit run main.py` to start the application.
 4. Or, you can try the application via
 
-**LICENSE**  
+**LICENSE**
+
 [BSD 3-Clause License](LICENSE)
