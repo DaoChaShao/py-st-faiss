@@ -5,7 +5,9 @@
 
 ### Features
 
-- add git-changelog dependency for changelog generation ([ee9ddb8](https://github.com///commit/ee9ddb89e4df0a0a59fcaa625319950a7d72c3b3))
+- add faiss-cpu dependency to requirements.txt ([b44c39c](https://github.com///commit/b44c39cc9b3c5a866fccb02e06ee5ddb3299ba9c))
+- implement Faiss index management functions and random seed classes ([4bfebdc](https://github.com///commit/4bfebdc3b9dba07bfb7f0cfd0b12b41cc63d1557))
+- add git-changelog dependency for changelog generation ([5caf111](https://github.com///commit/5caf111f4dcaebdff450b8addd1e71f88cf3dd80))
 - add CHANGELOG.md for version 0.1.0 and document initial features ([140f245](https://github.com///commit/140f2452ef7acf7753f164a1fe3aff802260d801))
 - add README.md for project documentation ([42db058](https://github.com///commit/42db058dd44a810804d1373857ba2adf6006aa4a))
 - add pyproject.toml for changelog configuration ([47ff5b5](https://github.com///commit/47ff5b5678e1fcddbd976881f462afa83632d2f9))
@@ -16,4 +18,8 @@
 - add embed.py for sentence embedding and visualization ([68aac08](https://github.com///commit/68aac083d141860e1633ddf8f475eadfa40cce69))
 - create __init__.py with main function template ([6e4c046](https://github.com///commit/6e4c04619b196f54b778bd7033e0d5fe4de6fc59))
 - add requirements file with essential dependencies ([ef65b82](https://github.com///commit/ef65b8232b133767e1d3a620ca80545a75730fb6))
+
+### Bug Fixes
+
+- improve Timer class representation for unstarted timers ([c4cf546](https://github.com///commit/c4cf54642547fddb3458e4a08a61661b01211450))
 
