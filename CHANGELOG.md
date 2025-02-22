@@ -23,3 +23,7 @@
 
 - improve Timer class representation for unstarted timers ([c4cf546](https://github.com///commit/c4cf54642547fddb3458e4a08a61661b01211450))
 
+### Docs
+
+- update CHANGELOG.md to reflect recent feature additions and bug fixes ([39b3863](https://github.com///commit/39b3863453b518887b3791934fa7c8c84f0f6c9d))
+
