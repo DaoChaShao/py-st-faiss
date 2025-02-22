@@ -5,6 +5,8 @@
 
 ### Features
 
+- add git-changelog dependency for changelog generation ([ee9ddb8](https://github.com///commit/ee9ddb89e4df0a0a59fcaa625319950a7d72c3b3))
+- add CHANGELOG.md for version 0.1.0 and document initial features ([140f245](https://github.com///commit/140f2452ef7acf7753f164a1fe3aff802260d801))
 - add README.md for project documentation ([42db058](https://github.com///commit/42db058dd44a810804d1373857ba2adf6006aa4a))
 - add pyproject.toml for changelog configuration ([47ff5b5](https://github.com///commit/47ff5b5678e1fcddbd976881f462afa83632d2f9))
 - add main.py to initialize application and set up page navigation ([a59221a](https://github.com///commit/a59221a4c9bdaec31b7c7381d949c8e96b7157cf))
