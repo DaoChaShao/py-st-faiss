@@ -8,23 +8,29 @@
 
 from faiss import Index, index_factory, METRIC_L2, write_index, read_index
 from numpy import random, ndarray, array
+from os import path
+from pandas import DataFrame
 
 
-def faiss_index_creator(dimension: int, method: str = "Flat") -> Index:
+def faiss_index_creator(dimensions: int, method: str = "Flat") -> Index:
     """ Creates a Faiss index based on the given dimension and method. """
-    index = index_factory(dimension, method, METRIC_L2)
+    index = index_factory(dimensions, method, METRIC_L2)
     # index = IndexFlatL2(dimension)
+    print(f"The dimensions of the index are {index.d}.")
     return index
 
 
-def faiss_index_adder(index, amount: int, dimension: int, vectors_type: str = "float32"):
+def faiss_index_adder(index, vectors: DataFrame) -> None:
     """ Adds vectors to a Faiss index. """
-    vectors = random.rand(amount, dimension).astype(vectors_type)
+    print(f"The shape of the param vectors with Dataframe is {vectors.shape}.")
     index.add(vectors)
 
 
-def faiss_index_search(index, query: ndarray, top_n: int) -> tuple[ndarray, ndarray]:
+def faiss_index_search(index, vectors: DataFrame, top_n: int) -> tuple[ndarray, ndarray]:
     """ Searches a Faiss index for the k nearest neighbors of the given query vectors. """
+    query = vectors.iloc[0].values.reshape(1, -1)
+    print(f"The shape of the extracted query is {query.shape}.")
+
     distances, indices = index.search(query, top_n)
     return distances, indices
 
@@ -81,3 +87,19 @@ class SeedNumpy(object):
 
     def __repr__(self):
         return f"Numpy seed is {self._seed}."
+
+
+def file_size_getter(file_path: str) -> str:
+    """ Returns the size of a file in bytes. """
+    file_path = f"{file_path}.faiss"
+    size: int = path.getsize(file_path)
+
+    # Convert bytes to KB, MB, GB, etc.
+    if size < 1024:
+        return f"{size} Bytes"
+    elif size < 1024 ** 2:
+        return f"{size / 1024:.2f} KB"
+    elif size < 1024 ** 3:
+        return f"{size / 1024 ** 2:.2f} MB"
+    else:
+        return f"{size / 1024 ** 3:.2f} GB"
