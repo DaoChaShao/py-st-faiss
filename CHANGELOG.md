@@ -28,6 +28,7 @@
 
 ### Docs
 
+- update CHANGELOG.md to include recent feature additions ([2bc01ab](https://github.com///commit/2bc01abdef224548b2c7bae28dbbc6deffd742ba))
 - fix formatting in README.md for LICENSE section ([9142e46](https://github.com///commit/9142e46a2103b09a72d2944c8eae84e6e696f4c2))
 - update CHANGELOG.md to include recent changes and improvements ([22bbcfb](https://github.com///commit/22bbcfb8d1d7e3d3a86bea8276d114a7987f81ef))
 - add introduction and usage instructions to README.md ([f62c7bd](https://github.com///commit/f62c7bd0000406656d55e32029074cbe36df42f1))
