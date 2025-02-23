@@ -8,8 +8,12 @@
 
 from pandas import DataFrame
 from sentence_transformers import SentenceTransformer
-from streamlit import empty, sidebar, spinner, data_editor, plotly_chart, session_state
+from streamlit import (empty, sidebar, spinner, data_editor, plotly_chart,
+                       session_state, header, button, columns, markdown)
 
+from utilis.faiss import (faiss_index_creator, faiss_index_adder,
+                          faiss_index_search, faiss_index_storager,
+                          file_size_getter)
 from utilis.tools import (params_model_getter, Timer, DimensionsReducer,
                           params_plotly_getter, sentences_3d)
 
@@ -63,7 +67,49 @@ if model_name != "Select":
             # Display the 3D chart
             chart = sentences_3d(df_reduce, point_size, font_size)
             plotly_chart(chart, use_container_width=True)
-
             empty_messages.success("The sentences have been embedded successfully")
+
+        with sidebar:
+            header("Vector Actions")
+            col_left, _, col_right = columns([2.5, 0.8, 1.2])
+
+            with col_left:
+                button_left = button("Similarities Check", type="secondary",
+                                     help="Click to check the similarities between the query and the compares")
+            with col_right:
+                button_right = button("Save", type="secondary", help="Click to save the Faiss Index")
+
+        if "index" not in session_state:
+            session_state.index = None
+
+        if button_left:
+            # Create a Faiss index
+            session_state.index = faiss_index_creator(df.shape[1])
+            # Add the embeddings to the index
+            faiss_index_adder(session_state.index, df)
+            # Search the index for the similarities
+            distances, indices = faiss_index_search(session_state.index, df, 3)
+
+            # Display the similarities
+            similarities: dict[str: list[float]] = {}
+            for compare, distance in zip(compares, distances[0]):
+                similarities[compare] = float(distance)
+
+            empty_messages.success("The similarities have been checked successfully")
+
+            # Display the similarities
+            markdown(f"**{query[0]}**")
+            data_editor(
+                DataFrame(list(similarities.items()), columns=["Sentence", "Similarity"]),
+                hide_index=True, disabled=True, use_container_width=True
+            )
+
+        if button_right:
+            # Save the Faiss index
+            faiss_name: str = "medical"
+            faiss_index_storager(session_state.index, faiss_name)
+            # Get the size of the file
+            file_size = file_size_getter(faiss_name)
+            empty_messages.success(f"The Faiss Index has been saved successfully, whose size is {file_size}")
 else:
     empty_messages.error("Please select a model")
