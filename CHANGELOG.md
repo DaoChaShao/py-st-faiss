@@ -5,6 +5,9 @@
 
 ### Features
 
+- add sidebar actions for Faiss index creation and saving with similarity checks ([826f326](https://github.com///commit/826f32670e98349d2d67fc049ebe76af84bffdbc))
+- update faiss index functions to use DataFrame and add file size utility ([84966d9](https://github.com///commit/84966d98f510bd6c863f0c2b1f339c0a6259004b))
+- add the faiss data generated from the embedding result ([ca4d904](https://github.com///commit/ca4d904aa63781f4a0b50496ace60bf0eb3a8646))
 - add faiss-cpu dependency to requirements.txt ([b44c39c](https://github.com///commit/b44c39cc9b3c5a866fccb02e06ee5ddb3299ba9c))
 - implement Faiss index management functions and random seed classes ([4bfebdc](https://github.com///commit/4bfebdc3b9dba07bfb7f0cfd0b12b41cc63d1557))
 - add git-changelog dependency for changelog generation ([5caf111](https://github.com///commit/5caf111f4dcaebdff450b8addd1e71f88cf3dd80))
@@ -25,7 +28,7 @@
 
 ### Docs
 
-- fix formatting in README.md for LICENSE section ([a3d3f58](https://github.com///commit/a3d3f584dd29b90bfd2f3156784549d51e6dd231))
+- fix formatting in README.md for LICENSE section ([9142e46](https://github.com///commit/9142e46a2103b09a72d2944c8eae84e6e696f4c2))
 - update CHANGELOG.md to include recent changes and improvements ([22bbcfb](https://github.com///commit/22bbcfb8d1d7e3d3a86bea8276d114a7987f81ef))
 - add introduction and usage instructions to README.md ([f62c7bd](https://github.com///commit/f62c7bd0000406656d55e32029074cbe36df42f1))
 - update CHANGELOG.md to reflect recent feature additions and bug fixes ([cae9a2a](https://github.com///commit/cae9a2a65cb9991d439613fb2482156b9f63fbe7))
