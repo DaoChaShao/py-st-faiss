@@ -15,14 +15,17 @@ def pages_setter() -> None:
         "page": [
             "subpages/home.py",
             "subpages/embed.py",
+            "subpages/loader.py",
         ],
         "title": [
             "Home",
             "Embedding",
+            "Faiss Loader",
         ],
         "icon": [
             ":material/home:",
             ":material/polyline:",
+            ":material/database:",
         ],
     }
 
@@ -32,6 +35,7 @@ def pages_setter() -> None:
         ],
         "Hugging Face Model": [
             Page(page=pages["page"][1], title=pages["title"][1], icon=pages["icon"][1]),
+            Page(page=pages["page"][2], title=pages["title"][2], icon=pages["icon"][2]),
         ]
     }
     pg = navigation(structure, position="sidebar", expanded=True)
