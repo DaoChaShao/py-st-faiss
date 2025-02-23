@@ -5,6 +5,10 @@
 
 ### Features
 
+- add loading spinner for 3D chart display in embed.py ([519c835](https://github.com///commit/519c835e7bbe8886f196c8fff4363223c5e07404))
+- add Faiss Loader page to sidebar navigation ([1841c27](https://github.com///commit/1841c27b69ecaf206fcf473e997b5c7eb105ebf1))
+- add params_loader function for selecting Faiss database in sidebar ([c5360fc](https://github.com///commit/c5360fc18d47a444e533952995f5d43219e00ef7))
+- implement loader for Faiss index with similarity checks and data display ([1efac63](https://github.com///commit/1efac6365c4f7c229ddecd4028c47e7edd6558bf))
 - add sidebar actions for Faiss index creation and saving with similarity checks ([826f326](https://github.com///commit/826f32670e98349d2d67fc049ebe76af84bffdbc))
 - update faiss index functions to use DataFrame and add file size utility ([84966d9](https://github.com///commit/84966d98f510bd6c863f0c2b1f339c0a6259004b))
 - add the faiss data generated from the embedding result ([ca4d904](https://github.com///commit/ca4d904aa63781f4a0b50496ace60bf0eb3a8646))
@@ -28,7 +32,7 @@
 
 ### Docs
 
-- update CHANGELOG.md to include recent feature additions ([2bc01ab](https://github.com///commit/2bc01abdef224548b2c7bae28dbbc6deffd742ba))
+- update CHANGELOG.md to include recent feature additions ([0934ed1](https://github.com///commit/0934ed17c9e5233895c8f9c81a13a45ca53a090a))
 - fix formatting in README.md for LICENSE section ([9142e46](https://github.com///commit/9142e46a2103b09a72d2944c8eae84e6e696f4c2))
 - update CHANGELOG.md to include recent changes and improvements ([22bbcfb](https://github.com///commit/22bbcfb8d1d7e3d3a86bea8276d114a7987f81ef))
 - add introduction and usage instructions to README.md ([f62c7bd](https://github.com///commit/f62c7bd0000406656d55e32029074cbe36df42f1))
