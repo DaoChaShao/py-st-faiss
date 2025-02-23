@@ -139,3 +139,16 @@ def sentences_3d(features: DataFrame, point_size: int, font_size: int):
     )
 
     return fig
+
+
+def params_loader() -> str:
+    with sidebar:
+        header("Loader Parameters")
+        options_box: list = ["medical"]
+        database: str = selectbox(
+            "Faiss Database", options_box, disabled=True,
+            help="Select the suitable database you want to load"
+        )
+        caption(f"The database is {database}.faiss")
+
+    return database
