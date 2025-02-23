@@ -64,10 +64,11 @@ if model_name != "Select":
         point_size, font_size = params_plotly_getter()
 
         if sidebar.button("3D Chart", type="primary", help="Click to display the 3D chart"):
-            # Display the 3D chart
-            chart = sentences_3d(df_reduce, point_size, font_size)
-            plotly_chart(chart, use_container_width=True)
-            empty_messages.success("The sentences have been embedded successfully")
+            with spinner("Displaying the 3D chart", show_time=True):
+                # Display the 3D chart
+                chart = sentences_3d(df_reduce, point_size, font_size)
+                plotly_chart(chart, use_container_width=True)
+                empty_messages.success("The sentences have been embedded successfully")
 
         with sidebar:
             header("Vector Actions")
