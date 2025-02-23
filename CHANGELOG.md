@@ -32,7 +32,8 @@
 
 ### Docs
 
-- update CHANGELOG.md to reflect recent feature additions ([a593eb4](https://github.com///commit/a593eb4921923518fea9ff5c8f74d92851ffde13))
+- update README.md to include link for trying the application in Streamlit ([8a91a05](https://github.com///commit/8a91a05c3054526fd9afff2a39ab70f08a14b682))
+- update CHANGELOG.md to reflect recent feature additions ([d167986](https://github.com///commit/d1679867f8e10dcf254af48923df43dfbb9cc3e9))
 - update CHANGELOG.md to include recent feature additions ([0934ed1](https://github.com///commit/0934ed17c9e5233895c8f9c81a13a45ca53a090a))
 - fix formatting in README.md for LICENSE section ([9142e46](https://github.com///commit/9142e46a2103b09a72d2944c8eae84e6e696f4c2))
 - update CHANGELOG.md to include recent changes and improvements ([22bbcfb](https://github.com///commit/22bbcfb8d1d7e3d3a86bea8276d114a7987f81ef))
